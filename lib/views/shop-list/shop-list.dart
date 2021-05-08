@@ -5,6 +5,7 @@ import 'package:flutter_shimmer/flutter_shimmer.dart';
 import 'package:provider/provider.dart';
 import 'package:sporto/utils/commons.dart';
 import 'package:sporto/views/description-page/description-page.dart';
+import 'package:sporto/views/news/news-services.dart';
 
 import '../../models/shop.dart';
 import 'prefered-shop.dart';
@@ -101,30 +102,31 @@ class _ShopListPage extends State<ShopListPage> {
                       fontSize: 20),
                 ),
               ),
-              // GestureDetector(
-              //   onTap: () {
-              //     SalonDetails _details = SalonDetails(
-              //       shopId: 'xyz',
-              //       shopName: 'hockey Academy',
-              //       logoUrl:
-              //           'https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/08/12/Pictures/new-zealand-v-india_6285a1d4-dc88-11ea-a145-8bf15479dae6.jpg',
-              //       address: 'pallapatti',
-              //       contactNumber: '9361144746',
-              //       rating: 4,
-              //       openTime: {'hour': '07', 'minute': '30'},
-              //       closeTime: {'hour': '13', 'minute': '30'},
-              //     );
-              //     FirebaseFirestore.instance
-              //         .collection('preferredShops')
-              //         .add(SalonDetails().toJson(_details));
-              //   },
-              //   child: Container(
-              //     color: Colors.green,
-              //     height: 60,
-              //     alignment: Alignment.center,
-              //     child: Text('press'),
-              //   ),
-              // ),
+              GestureDetector(
+                onTap: () async {
+                  // SalonDetails _details = SalonDetails(
+                  //   shopId: 'xyz',
+                  //   shopName: 'hockey Academy',
+                  //   logoUrl:
+                  //       'https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/08/12/Pictures/new-zealand-v-india_6285a1d4-dc88-11ea-a145-8bf15479dae6.jpg',
+                  //   address: 'pallapatti',
+                  //   contactNumber: '9361144746',
+                  //   rating: 4,
+                  //   openTime: {'hour': '07', 'minute': '30'},
+                  //   closeTime: {'hour': '13', 'minute': '30'},
+                  // );
+                  // FirebaseFirestore.instance
+                  //     .collection('preferredShops')
+                  //     .add(SalonDetails().toJson(_details));
+                  News().getNews();
+                },
+                child: Container(
+                  color: Colors.green,
+                  height: 60,
+                  alignment: Alignment.center,
+                  child: Text('press'),
+                ),
+              ),
               SingleChildScrollView(
                 child: Wrap(
                   children: [
