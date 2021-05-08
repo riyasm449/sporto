@@ -7,6 +7,8 @@ class Commons {
   // static BehaviorSubject<Event> events = BehaviorSubject<Event>();
   static const baseURL = 'https://doofie.herokuapp.com/api_v1';
 
+  static const newsAPIKey = '9a9ac82d4fac47a5ab6e37138c5b86ad';
+
   static const hintColor = Color(0xFF4D0F29);
   static Color bgColor = Commons.colorFromHex('#66ccff');
   static Color bgLightColor = Commons.colorFromHex('#e6f7ff');
