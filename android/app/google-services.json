@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "207465993143",
+    "project_id": "sportoapp-fazil",
+    "storage_bucket": "sportoapp-fazil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207465993143:android:0e364e2e5e54f69b4f0e32",
+        "android_client_info": {
+          "package_name": "com.fazil.sporto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207465993143-mnl6agv9dijj6sk5dli1hoebstt1ab3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Nd1NTNgaflIZDmqeZVq2Lf0yo7uzBm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207465993143-mnl6agv9dijj6sk5dli1hoebstt1ab3h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
