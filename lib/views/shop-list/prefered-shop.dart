@@ -26,7 +26,7 @@ class PreferredShop extends StatelessWidget {
         return Container(
           height: 220,
           width: MediaQuery.of(context).size.width,
-          color: Commons.bgLightColor,
+          color: Commons.greyAccent1,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.all(5),
@@ -60,8 +60,10 @@ class PreferredShop extends StatelessWidget {
                   );
                 },
                 child: Card(
+                    elevation: 2,
                     child: Container(
                         decoration: BoxDecoration(
+                          color: Commons.bgLightColor,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(width: 3, color: Colors.white),
                         ),
