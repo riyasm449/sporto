@@ -34,6 +34,12 @@ dependencies:
   dio: any
   http: ^0.12.0+4
   webview_flutter: ^2.0.4
+  flutter_launcher_icons: "^0.9.0"
+
+flutter_icons:
+  image_path: "assets/images/icon.png"
+  android: true
+  ios: true
 
 dev_dependencies:
   flutter_test:
