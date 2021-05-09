@@ -44,7 +44,7 @@ class SalonCard extends StatelessWidget {
             height: 160,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: Commons.bgLightColor,
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: Commons.greyAccent2)),
           ),

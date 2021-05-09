@@ -26,6 +26,32 @@ class Commons {
     return Color(int.parse(buffer.toString(), radix: 16));
   }
 
+  static AppBar appBar = AppBar(
+    backgroundColor: Colors.white,
+    elevation: 0,
+    title: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'SPORT',
+          style: TextStyle(
+              fontFamily: 'Nunito',
+              color: Colors.black,
+              fontWeight: FontWeight.w800,
+              fontSize: 25),
+        ),
+        Text(
+          'O',
+          style: TextStyle(
+              fontFamily: 'Nunito',
+              color: Colors.blue,
+              fontWeight: FontWeight.w800,
+              fontSize: 25),
+        ),
+      ],
+    ),
+  );
+
   // static Widget loader() {
   //   return SpinKitFadingCircle(color: Colors.black);
   // }

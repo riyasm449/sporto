@@ -5,9 +5,9 @@ import 'package:flutter_shimmer/flutter_shimmer.dart';
 import 'package:provider/provider.dart';
 import 'package:sporto/utils/commons.dart';
 import 'package:sporto/views/description-page/description-page.dart';
-import 'package:sporto/views/news/news-services.dart';
 
 import '../../models/shop.dart';
+import '../../utils/commons.dart';
 import 'prefered-shop.dart';
 import 'shop-list-widget.dart';
 import 'shop.provider.dart';
@@ -51,18 +51,7 @@ class _ShopListPage extends State<ShopListPage> {
   @override
   Widget build(BuildContext context) {
     _shopProvider = Provider.of<ShopProvider>(context);
-    return Scaffold(
-      body: _shopProvider.isLoading ? loading() : sample(),
-      backgroundColor: Commons.bgLightColor,
-      appBar: AppBar(
-        elevation: 1,
-        title: Text(
-          'Sporto',
-          style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.w800, fontSize: 25),
-        ),
-      ),
-    );
+    return _shopProvider.isLoading ? loading() : sample();
   }
 
   Widget sample() {
@@ -102,36 +91,35 @@ class _ShopListPage extends State<ShopListPage> {
                       fontSize: 20),
                 ),
               ),
-              GestureDetector(
-                onTap: () async {
-                  // SalonDetails _details = SalonDetails(
-                  //   shopId: 'xyz',
-                  //   shopName: 'hockey Academy',
-                  //   logoUrl:
-                  //       'https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/08/12/Pictures/new-zealand-v-india_6285a1d4-dc88-11ea-a145-8bf15479dae6.jpg',
-                  //   address: 'pallapatti',
-                  //   contactNumber: '9361144746',
-                  //   rating: 4,
-                  //   openTime: {'hour': '07', 'minute': '30'},
-                  //   closeTime: {'hour': '13', 'minute': '30'},
-                  // );
-                  // FirebaseFirestore.instance
-                  //     .collection('preferredShops')
-                  //     .add(SalonDetails().toJson(_details));
-                  News().getNews();
-                },
-                child: Container(
-                  color: Colors.green,
-                  height: 60,
-                  alignment: Alignment.center,
-                  child: Text('press'),
-                ),
-              ),
+              // GestureDetector(
+              //   onTap: () async {
+              //     // SalonDetails _details = SalonDetails(
+              //     //   shopId: 'xyz',
+              //     //   shopName: 'hockey Academy',
+              //     //   logoUrl:
+              //     //       'https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/08/12/Pictures/new-zealand-v-india_6285a1d4-dc88-11ea-a145-8bf15479dae6.jpg',
+              //     //   address: 'pallapatti',
+              //     //   contactNumber: '9361144746',
+              //     //   rating: 4,
+              //     //   openTime: {'hour': '07', 'minute': '30'},
+              //     //   closeTime: {'hour': '13', 'minute': '30'},
+              //     // );
+              //     // FirebaseFirestore.instance
+              //     //     .collection('preferredShops')
+              //     //     .add(SalonDetails().toJson(_details));
+              //     NewsProvider().getNews();
+              //   },
+              //   child: Container(
+              //     color: Colors.green,
+              //     height: 60,
+              //     alignment: Alignment.center,
+              //     child: Text('press'),
+              //   ),
+              // ),
               SingleChildScrollView(
                 child: Wrap(
                   children: [
                     PreferredShop(),
-                    Divider(),
                     if (snapshot.data.size == 0 || snapshot.data.size == null)
                       const Center(
                           child: Text('No Shop Available in this Area'))
@@ -199,11 +187,10 @@ class _ShopListPage extends State<ShopListPage> {
       title: DropdownButton<String>(
         focusColor: Colors.white,
         value: _shopProvider.selectedLoaction,
-        // style: TextStyle(color: Colors.white, fontSize: 16),
         onChanged: (String value) =>
             _shopProvider.changeSelectedLoaction(value),
         hint: Text(
-          'Category',
+          'Location',
           textAlign: TextAlign.center,
           style: TextStyle(color: Commons.greyAccent2),
         ),

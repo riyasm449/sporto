@@ -1,18 +1,20 @@
 class Article {
+  String source;
   String title;
   String author;
   String description;
-  String urlToImage;
+  String imgUrl;
   DateTime publshedAt;
   String content;
   String articleUrl;
 
   Article(
-      {this.title,
+      {this.source,
+      this.title,
       this.description,
       this.author,
       this.content,
       this.publshedAt,
-      this.urlToImage,
+      this.imgUrl,
       this.articleUrl});
 }
