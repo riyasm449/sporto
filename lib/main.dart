@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sporto/utils/app-theme.dart';
+import 'package:sporto/views/about/add-shop.form.dart';
 import 'package:sporto/views/about/admin.dart';
 import 'package:sporto/views/about/login.dart';
 import 'package:sporto/views/dashboard/dashboard.dart';
@@ -35,6 +36,9 @@ class MyApp extends StatelessWidget {
             '/descriptionPage': (BuildContext context) => DescriptionPage(),
             '/login': (BuildContext context) => LoginPage(),
             '/admin': (BuildContext context) => AdminPage(),
+            '/add-shop': (BuildContext context) => AddShop(),
+            '/add-preferred-shop': (BuildContext context) =>
+                AddShop(prefrerred: true),
           }),
     );
   }
