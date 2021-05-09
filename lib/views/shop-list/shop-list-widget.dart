@@ -54,7 +54,7 @@ class SalonCard extends StatelessWidget {
           right: 10.5,
           left: 10.5,
           child: CachedNetworkImage(
-            imageUrl: shopDetails.logoUrl,
+            imageUrl: shopDetails.imgUrl,
             imageBuilder: (context, imageProvider) => Container(
               height: 89.5,
               width: MediaQuery.of(context).size.width,

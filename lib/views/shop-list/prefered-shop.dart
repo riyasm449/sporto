@@ -34,7 +34,7 @@ class PreferredShop extends StatelessWidget {
             itemBuilder: (BuildContext context, num index) {
               String image = snapshot.data.docs[index].data()['logoUrl'];
               String name = snapshot.data.docs[index].data()['name'];
-              String address = snapshot.data.docs[index].data()['address'];
+              String address = snapshot.data.docs[index].data()['area'];
               num rating = snapshot.data.docs[index].data()['rating'];
               String area = snapshot.data.docs[index].data()['area'];
               if (_shopProvider.selectedLoaction != 'any' &&
@@ -103,7 +103,7 @@ class PreferredShop extends StatelessWidget {
                                   color: Colors.white,
                                   image: DecorationImage(
                                       fit: BoxFit.fill,
-                                      image: (image == null)
+                                      image: (image == null || image == '')
                                           ? const AssetImage(
                                               'assets/images/logo.png')
                                           : NetworkImage(image)),
