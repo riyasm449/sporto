@@ -2,16 +2,17 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sporto/utils/app-theme.dart';
-import 'package:sporto/views/about/add-shop.form.dart';
-import 'package:sporto/views/about/admin.dart';
-import 'package:sporto/views/about/login.dart';
-import 'package:sporto/views/dashboard/dashboard.dart';
-import 'package:sporto/views/description-page/description-page.dart';
-import 'package:sporto/views/shop-list/shop-list.dart';
-import 'package:sporto/views/shop-list/shop.provider.dart';
 
+import 'splash-screen.dart';
+import 'utils/app-theme.dart';
+import 'views/about/add-shop.form.dart';
+import 'views/about/admin.dart';
+import 'views/about/login.dart';
+import 'views/dashboard/dashboard.dart';
+import 'views/description-page/description-page.dart';
 import 'views/news/news-services.dart';
+import 'views/shop-list/shop-list.dart';
+import 'views/shop-list/shop.provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,8 +31,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: appTheme,
           debugShowCheckedModeBanner: false,
-          home: Dashboard(),
+          home: SplashScreen(),
           routes: <String, WidgetBuilder>{
+            '/dashboard': (BuildContext context) => Dashboard(),
             '/shops': (BuildContext context) => ShopListPage(),
             '/descriptionPage': (BuildContext context) => DescriptionPage(),
             '/login': (BuildContext context) => LoginPage(),
