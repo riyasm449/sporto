@@ -117,22 +117,11 @@ class _ShopListPage extends State<ShopListPage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => DescriptionPage(
-                                                name: snapshot.data.docs[index]
-                                                    .data()['name'],
-                                                description: snapshot
-                                                    .data.docs[index]
-                                                    .data()['description'],
-                                                address: snapshot
-                                                    .data.docs[index]
-                                                    .data()['address'],
-                                                phone: snapshot.data.docs[index]
-                                                    .data()['contact_number'],
-                                                imgUrl: snapshot
-                                                    .data.docs[index]
-                                                    .data()['logoUrl'],
-                                                sportsOffered: snapshot
-                                                    .data.docs[index]
-                                                    .data()['sportsOffered'],
+                                                shopDetails:
+                                                    ShopDetails.fromJson(
+                                                        snapshot
+                                                            .data.docs[index]
+                                                            .data()),
                                               )),
                                     );
                                   },

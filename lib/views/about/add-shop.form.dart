@@ -21,6 +21,7 @@ class _AddShopState extends State<AddShop> {
   final areaField = TextEditingController();
   final ratingField = TextEditingController();
   final imgurlField = TextEditingController();
+  final mailField = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +51,22 @@ class _AddShopState extends State<AddShop> {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       labelText: 'Shop name',
+                    ),
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.mail_outline,
+                ),
+                title: Container(
+                  padding: EdgeInsets.only(right: 10, left: 10),
+                  decoration: BoxDecoration(border: Border.all(width: .5)),
+                  child: TextField(
+                    controller: mailField,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      labelText: 'Mail Id',
                     ),
                   ),
                 ),
@@ -199,6 +216,7 @@ class _AddShopState extends State<AddShop> {
             description: descriptionField.text,
             contactNumber: phoneField.text,
             imgUrl: imgurlField.text,
+            mailId: mailField.text,
             area: areaField.text);
         await FirebaseFirestore.instance
             .collection(widget.prefrerred ? 'preferredShops' : 'shops')
