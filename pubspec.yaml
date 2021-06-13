@@ -31,10 +31,10 @@ dependencies:
   cloud_firestore: any
   cupertino_icons: ^1.0.2
   newsapi: ^1.0.9
-  dio: any
   http: ^0.12.0+4
   webview_flutter: ^2.0.4
   flutter_launcher_icons: "^0.9.0"
+  mailer: any
 
 flutter_icons:
   image_path: "assets/images/icon.png"

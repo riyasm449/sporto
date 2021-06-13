@@ -10,16 +10,15 @@ class SalonCard extends StatelessWidget {
 
   const SalonCard({Key key, @required this.shopDetails}) : super(key: key);
 
-  Future<void> onclick(BuildContext context) async {
-    Navigator.pushNamed(context, '/menu');
-  }
 
   static Container _salonLogoPlaceHolder() {
     return Container(
       width: 70,
       height: 70,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)),
         color: Colors.white,
         image: const DecorationImage(
           image: AssetImage('assets/images/logo.png'),

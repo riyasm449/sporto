@@ -5,19 +5,22 @@ class ShopDetails {
   final String address;
   final String area;
   final String description;
-
   final String contactNumber;
+  final String mailId;
   final num rating;
+  final String sportsOffered;
 
   ShopDetails(
-      {this.shopId,
+      {this.sportsOffered,
+      this.shopId,
       this.shopName,
       this.imgUrl,
       this.address,
       this.contactNumber,
       this.description,
       this.rating,
-      this.area});
+      this.area,
+      this.mailId});
 
   Map<String, dynamic> toJson(ShopDetails details) {
     return {
@@ -29,6 +32,7 @@ class ShopDetails {
       'rating': details.rating,
       'area': details.area,
       'description': details.description,
+      'sportsOffered': details.sportsOffered,
     };
   }
 
@@ -42,6 +46,8 @@ class ShopDetails {
       address: json['address'] ?? '',
       area: json['area'] ?? '',
       rating: json['rating'] ?? 0,
+      mailId: json['mail'],
+      sportsOffered: json['sportsOffered'],
     );
   }
 }

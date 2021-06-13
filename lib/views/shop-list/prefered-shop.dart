@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sporto/models/shop.dart';
 import 'package:sporto/views/description-page/description-page.dart';
 
 import '../../utils/commons.dart';
@@ -45,17 +46,8 @@ class PreferredShop extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (context) => DescriptionPage(
-                              name: snapshot.data.docs[index].data()['name'],
-                              description: snapshot.data.docs[index]
-                                  .data()['description'],
-                              address:
-                                  snapshot.data.docs[index].data()['address'],
-                              phone: snapshot.data.docs[index]
-                                  .data()['contact_number'],
-                              imgUrl:
-                                  snapshot.data.docs[index].data()['logoUrl'],
-                              sportsOffered: snapshot.data.docs[index]
-                                  .data()['sportsOffered'],
+                              shopDetails: ShopDetails.fromJson(
+                                  snapshot.data.docs[index].data()),
                             )),
                   );
                 },
