@@ -53,7 +53,7 @@ class _AboutPageState extends State<AboutPage> {
                 ListTile(
                   leading: Icon(Icons.person),
                   title: Text(
-                    'Mohamed Ismail Fazil (18135160149)',
+                    'Jayanth S (920218104011)',
                     style: TextStyle(
                         fontFamily: 'Nunito',
                         color: Colors.white,
@@ -64,7 +64,7 @@ class _AboutPageState extends State<AboutPage> {
                 ListTile(
                   leading: Icon(Icons.person),
                   title: Text(
-                    'Mohamed Nadeem (18135160199)',
+                    'Srinivas M (920218104038)',
                     style: TextStyle(
                         fontFamily: 'Nunito',
                         color: Colors.white,
