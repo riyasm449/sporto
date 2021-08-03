@@ -24,52 +24,37 @@ class _AboutPageState extends State<AboutPage> {
               children: [
                 Text(
                   'Description',
-                  style: TextStyle(
-                      fontFamily: 'Nunito',
-                      color: Colors.white,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20),
+                  style:
+                      TextStyle(fontFamily: 'Nunito', color: Colors.white, fontWeight: FontWeight.w900, fontSize: 20),
                 ),
                 Text(
                   data,
                   textAlign: TextAlign.justify,
-                  style: TextStyle(
-                      fontFamily: 'Nunito',
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 13),
+                  style:
+                      TextStyle(fontFamily: 'Nunito', color: Colors.white, fontWeight: FontWeight.w500, fontSize: 13),
                 ),
                 Divider(
                   color: Commons.greyAccent3,
                 ),
                 Text(
                   'Developed by',
-                  style: TextStyle(
-                      fontFamily: 'Nunito',
-                      color: Colors.white,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20),
+                  style:
+                      TextStyle(fontFamily: 'Nunito', color: Colors.white, fontWeight: FontWeight.w900, fontSize: 20),
                 ),
                 ListTile(
                   leading: Icon(Icons.person),
                   title: Text(
                     'Jayanth S (920218104011)',
-                    style: TextStyle(
-                        fontFamily: 'Nunito',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 18),
+                    style:
+                        TextStyle(fontFamily: 'Nunito', color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18),
                   ),
                 ),
                 ListTile(
                   leading: Icon(Icons.person),
                   title: Text(
                     'Srinivas M (920218104038)',
-                    style: TextStyle(
-                        fontFamily: 'Nunito',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 18),
+                    style:
+                        TextStyle(fontFamily: 'Nunito', color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18),
                   ),
                 ),
                 Divider(
@@ -81,11 +66,8 @@ class _AboutPageState extends State<AboutPage> {
                   },
                   title: Text(
                     'ADMIN LOGIN >>',
-                    style: TextStyle(
-                        fontFamily: 'Nunito',
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 15),
+                    style:
+                        TextStyle(fontFamily: 'Nunito', color: Colors.white, fontWeight: FontWeight.w900, fontSize: 15),
                   ),
                 ),
               ],
